@@ -1,0 +1,68 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Agentic SQA Evaluation Dashboard</title>
+  <desc id="desc">Research dashboard for defect detection, release risk, evidence completeness, consistency, confidence, and human oversight.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1280" y2="720"><stop stop-color="#F8FBFF"/><stop offset="1" stop-color="#ECFDF5"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0F172A" flood-opacity="0.09"/></filter></defs>
+  <rect width="1280" height="720" rx="28" fill="url(#bg)"/>
+  <text x="56" y="62" font-family="Arial" font-size="30" font-weight="800" fill="#0F172A">Agentic SQA Evaluation Dashboard</text>
+  <text x="56" y="92" font-family="Arial" font-size="15" fill="#64748B">Research view for quality performance, trustworthiness, and oversight</text>
+
+  <g transform="translate(56 128)" filter="url(#s)">
+    <rect width="260" height="112" rx="20" fill="white"/>
+    <text x="24" y="32" font-family="Arial" font-size="12" font-weight="700" fill="#64748B">DEFECT DETECTION F1</text>
+    <text x="24" y="76" font-family="Arial" font-size="34" font-weight="800" fill="#0F172A">0.86</text>
+    <rect x="168" y="49" width="68" height="30" rx="15" fill="#ECFDF5"/><text x="202" y="69" text-anchor="middle" font-family="Arial" font-size="12" font-weight="700" fill="#047857">+8%</text>
+  </g>
+  <g transform="translate(336 128)" filter="url(#s)">
+    <rect width="260" height="112" rx="20" fill="white"/>
+    <text x="24" y="32" font-family="Arial" font-size="12" font-weight="700" fill="#64748B">EVIDENCE COMPLETENESS</text>
+    <text x="24" y="76" font-family="Arial" font-size="34" font-weight="800" fill="#0F172A">92%</text>
+    <rect x="168" y="49" width="68" height="30" rx="15" fill="#EFF6FF"/><text x="202" y="69" text-anchor="middle" font-family="Arial" font-size="12" font-weight="700" fill="#1D4ED8">Good</text>
+  </g>
+  <g transform="translate(616 128)" filter="url(#s)">
+    <rect width="260" height="112" rx="20" fill="white"/>
+    <text x="24" y="32" font-family="Arial" font-size="12" font-weight="700" fill="#64748B">DECISION CONSISTENCY</text>
+    <text x="24" y="76" font-family="Arial" font-size="34" font-weight="800" fill="#0F172A">88%</text>
+    <rect x="168" y="49" width="68" height="30" rx="15" fill="#F5F3FF"/><text x="202" y="69" text-anchor="middle" font-family="Arial" font-size="12" font-weight="700" fill="#6D28D9">Stable</text>
+  </g>
+  <g transform="translate(896 128)" filter="url(#s)">
+    <rect width="328" height="112" rx="20" fill="white"/>
+    <text x="24" y="32" font-family="Arial" font-size="12" font-weight="700" fill="#64748B">HUMAN OVERRIDE RATE</text>
+    <text x="24" y="76" font-family="Arial" font-size="34" font-weight="800" fill="#0F172A">14%</text>
+    <rect x="220" y="49" width="82" height="30" rx="15" fill="#FFF7ED"/><text x="261" y="69" text-anchor="middle" font-family="Arial" font-size="12" font-weight="700" fill="#C2410C">Review</text>
+  </g>
+
+  <g transform="translate(56 270)" filter="url(#s)">
+    <rect width="570" height="280" rx="22" fill="white"/>
+    <text x="24" y="38" font-family="Arial" font-size="15" font-weight="700" fill="#0F172A">Quality Risk by Scenario</text>
+    <text x="24" y="60" font-family="Arial" font-size="11" fill="#64748B">illustrative research dashboard</text>
+    <line x1="62" y1="224" x2="530" y2="224" stroke="#CBD5E1"/>
+    <line x1="62" y1="95" x2="62" y2="224" stroke="#CBD5E1"/>
+    <rect x="100" y="176" width="54" height="48" rx="8" fill="#93C5FD"/>
+    <rect x="196" y="142" width="54" height="82" rx="8" fill="#C4B5FD"/>
+    <rect x="292" y="104" width="54" height="120" rx="8" fill="#FDBA74"/>
+    <rect x="388" y="158" width="54" height="66" rx="8" fill="#6EE7B7"/>
+    <rect x="484" y="128" width="32" height="96" rx="8" fill="#FCA5A5"/>
+    <text x="127" y="246" text-anchor="middle" font-family="Arial" font-size="10" fill="#64748B">SQA-01</text>
+    <text x="223" y="246" text-anchor="middle" font-family="Arial" font-size="10" fill="#64748B">SQA-02</text>
+    <text x="319" y="246" text-anchor="middle" font-family="Arial" font-size="10" fill="#64748B">SQA-03</text>
+    <text x="415" y="246" text-anchor="middle" font-family="Arial" font-size="10" fill="#64748B">SQA-04</text>
+    <text x="500" y="246" text-anchor="middle" font-family="Arial" font-size="10" fill="#64748B">SQA-05</text>
+  </g>
+
+  <g transform="translate(650 270)" filter="url(#s)">
+    <rect width="574" height="280" rx="22" fill="white"/>
+    <text x="24" y="38" font-family="Arial" font-size="15" font-weight="700" fill="#0F172A">Agent Evidence &amp; Oversight</text>
+    <text x="24" y="62" font-family="Arial" font-size="11" fill="#64748B">latest synthetic evaluation run</text>
+    <g transform="translate(24 86)">
+      <rect width="526" height="42" rx="12" fill="#F8FAFC"/><text x="16" y="26" font-family="Arial" font-size="12" font-weight="700" fill="#0F172A">Requirements QA</text><text x="340" y="26" font-family="Arial" font-size="11" fill="#64748B">confidence 0.84</text><rect x="454" y="10" width="56" height="22" rx="11" fill="#FEF3C7"/><text x="482" y="25" text-anchor="middle" font-family="Arial" font-size="10" font-weight="700" fill="#B45309">MED</text>
+      <rect y="52" width="526" height="42" rx="12" fill="#F8FAFC"/><text x="16" y="78" font-family="Arial" font-size="12" font-weight="700" fill="#0F172A">Test Strategy</text><text x="340" y="78" font-family="Arial" font-size="11" fill="#64748B">confidence 0.90</text><rect x="454" y="62" width="56" height="22" rx="11" fill="#FEE2E2"/><text x="482" y="77" text-anchor="middle" font-family="Arial" font-size="10" font-weight="700" fill="#B91C1C">HIGH</text>
+      <rect y="104" width="526" height="42" rx="12" fill="#F8FAFC"/><text x="16" y="130" font-family="Arial" font-size="12" font-weight="700" fill="#0F172A">Release Assurance</text><text x="340" y="130" font-family="Arial" font-size="11" fill="#64748B">confidence 0.91</text><rect x="454" y="114" width="56" height="22" rx="11" fill="#FEE2E2"/><text x="482" y="129" text-anchor="middle" font-family="Arial" font-size="10" font-weight="700" fill="#B91C1C">HIGH</text>
+    </g>
+    <rect x="24" y="244" width="526" height="20" rx="10" fill="#FFF7ED"/>
+    <text x="287" y="258" text-anchor="middle" font-family="Arial" font-size="10" font-weight="700" fill="#C2410C">Human approval required before release decision</text>
+  </g>
+
+  <rect x="56" y="582" width="1168" height="82" rx="20" fill="white" fill-opacity="0.9" stroke="#CBD5E1"/>
+  <text x="82" y="614" font-family="Arial" font-size="13" font-weight="700" fill="#0F172A">Research interpretation</text>
+  <text x="82" y="640" font-family="Arial" font-size="12" fill="#64748B">Performance metrics are evaluated together with evidence quality, consistency, confidence calibration, and human intervention — not accuracy alone.</text>
+</svg>
