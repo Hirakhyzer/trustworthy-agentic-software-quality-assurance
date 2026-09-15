@@ -1,0 +1,55 @@
+<svg width="1280" height="560" viewBox="0 0 1280 560" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Continuous Quality Workflow</title>
+  <desc id="desc">Workflow from software change observation through agent analysis, evidence gathering, risk estimation, human oversight, and evaluation.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1280" y2="560"><stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#EFF6FF"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0F172A" flood-opacity="0.09"/></filter><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#94A3B8"/></marker></defs>
+  <rect width="1280" height="560" rx="28" fill="url(#bg)"/>
+  <text x="60" y="68" font-family="Arial" font-size="30" font-weight="800" fill="#0F172A">Continuous Agentic Quality Assurance Workflow</text>
+  <text x="60" y="98" font-family="Arial" font-size="15" fill="#64748B">From software change to evidence-backed decision and empirical evaluation</text>
+
+  <g transform="translate(50 175)" filter="url(#s)">
+    <rect width="170" height="150" rx="20" fill="white"/>
+    <circle cx="85" cy="42" r="22" fill="#DBEAFE"/><text x="85" y="48" text-anchor="middle" font-family="Arial" font-size="16" font-weight="700" fill="#1D4ED8">1</text>
+    <text x="85" y="82" text-anchor="middle" font-family="Arial" font-size="14" font-weight="700" fill="#0F172A">Observe Change</text>
+    <text x="85" y="106" text-anchor="middle" font-family="Arial" font-size="11" fill="#64748B">requirements</text><text x="85" y="123" text-anchor="middle" font-family="Arial" font-size="11" fill="#64748B">code • tests • failures</text>
+  </g>
+  <path d="M220 250H252" stroke="#94A3B8" stroke-width="3" marker-end="url(#a)"/>
+  <g transform="translate(260 175)" filter="url(#s)">
+    <rect width="170" height="150" rx="20" fill="white"/>
+    <circle cx="85" cy="42" r="22" fill="#EDE9FE"/><text x="85" y="48" text-anchor="middle" font-family="Arial" font-size="16" font-weight="700" fill="#6D28D9">2</text>
+    <text x="85" y="82" text-anchor="middle" font-family="Arial" font-size="14" font-weight="700" fill="#0F172A">Agent Analysis</text>
+    <text x="85" y="106" text-anchor="middle" font-family="Arial" font-size="11" fill="#64748B">specialized QA</text><text x="85" y="123" text-anchor="middle" font-family="Arial" font-size="11" fill="#64748B">perspectives</text>
+  </g>
+  <path d="M430 250H462" stroke="#94A3B8" stroke-width="3" marker-end="url(#a)"/>
+  <g transform="translate(470 175)" filter="url(#s)">
+    <rect width="170" height="150" rx="20" fill="white"/>
+    <circle cx="85" cy="42" r="22" fill="#D1FAE5"/><text x="85" y="48" text-anchor="middle" font-family="Arial" font-size="16" font-weight="700" fill="#047857">3</text>
+    <text x="85" y="82" text-anchor="middle" font-family="Arial" font-size="14" font-weight="700" fill="#0F172A">Gather Evidence</text>
+    <text x="85" y="106" text-anchor="middle" font-family="Arial" font-size="11" fill="#64748B">observable facts</text><text x="85" y="123" text-anchor="middle" font-family="Arial" font-size="11" fill="#64748B">linked to findings</text>
+  </g>
+  <path d="M640 250H672" stroke="#94A3B8" stroke-width="3" marker-end="url(#a)"/>
+  <g transform="translate(680 175)" filter="url(#s)">
+    <rect width="170" height="150" rx="20" fill="white"/>
+    <circle cx="85" cy="42" r="22" fill="#FEF3C7"/><text x="85" y="48" text-anchor="middle" font-family="Arial" font-size="16" font-weight="700" fill="#B45309">4</text>
+    <text x="85" y="82" text-anchor="middle" font-family="Arial" font-size="14" font-weight="700" fill="#0F172A">Estimate Risk</text>
+    <text x="85" y="106" text-anchor="middle" font-family="Arial" font-size="11" fill="#64748B">risk • confidence</text><text x="85" y="123" text-anchor="middle" font-family="Arial" font-size="11" fill="#64748B">uncertainty</text>
+  </g>
+  <path d="M850 250H882" stroke="#94A3B8" stroke-width="3" marker-end="url(#a)"/>
+  <g transform="translate(890 175)" filter="url(#s)">
+    <rect width="170" height="150" rx="20" fill="white"/>
+    <circle cx="85" cy="42" r="22" fill="#FFEDD5"/><text x="85" y="48" text-anchor="middle" font-family="Arial" font-size="16" font-weight="700" fill="#C2410C">5</text>
+    <text x="85" y="82" text-anchor="middle" font-family="Arial" font-size="14" font-weight="700" fill="#0F172A">Human Oversight</text>
+    <text x="85" y="106" text-anchor="middle" font-family="Arial" font-size="11" fill="#64748B">approve • override</text><text x="85" y="123" text-anchor="middle" font-family="Arial" font-size="11" fill="#64748B">investigate</text>
+  </g>
+  <path d="M1060 250H1092" stroke="#94A3B8" stroke-width="3" marker-end="url(#a)"/>
+  <g transform="translate(1100 175)" filter="url(#s)">
+    <rect width="130" height="150" rx="20" fill="white"/>
+    <circle cx="65" cy="42" r="22" fill="#CCFBF1"/><text x="65" y="48" text-anchor="middle" font-family="Arial" font-size="16" font-weight="700" fill="#0F766E">6</text>
+    <text x="65" y="82" text-anchor="middle" font-family="Arial" font-size="14" font-weight="700" fill="#0F172A">Evaluate</text>
+    <text x="65" y="106" text-anchor="middle" font-family="Arial" font-size="11" fill="#64748B">accuracy</text><text x="65" y="123" text-anchor="middle" font-family="Arial" font-size="11" fill="#64748B">trust • effort</text>
+  </g>
+
+  <rect x="175" y="385" width="930" height="92" rx="20" fill="white" fill-opacity="0.86" stroke="#CBD5E1"/>
+  <text x="640" y="416" text-anchor="middle" font-family="Arial" font-size="14" font-weight="700" fill="#0F172A">Research feedback loop</text>
+  <text x="640" y="443" text-anchor="middle" font-family="Arial" font-size="12" fill="#64748B">Evaluation results refine thresholds, agent roles, evidence requirements, benchmark design, and oversight policy.</text>
+  <path d="M1040 477C1040 515 235 515 235 477" stroke="#94A3B8" stroke-width="2" stroke-dasharray="7 7" marker-end="url(#a)"/>
+</svg>
