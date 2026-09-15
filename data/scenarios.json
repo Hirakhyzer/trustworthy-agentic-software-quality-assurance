@@ -1,0 +1,35 @@
+[
+  {
+    "scenario_id": "SQA-001",
+    "title": "Safe maintenance change",
+    "requirements": ["The API must return HTTP 200 for valid requests."],
+    "changed_modules": ["api.py"],
+    "tests_changed": ["test_api.py"],
+    "known_failures": [],
+    "complexity_delta": 0.5,
+    "coverage_delta": 2.0,
+    "expected_recommendation": "approve"
+  },
+  {
+    "scenario_id": "SQA-002",
+    "title": "Coverage regression without test updates",
+    "requirements": ["Validation errors must include a trace identifier."],
+    "changed_modules": ["validation.py", "service.py"],
+    "tests_changed": [],
+    "known_failures": [],
+    "complexity_delta": 5.0,
+    "coverage_delta": -6.0,
+    "expected_recommendation": "review"
+  },
+  {
+    "scenario_id": "SQA-003",
+    "title": "Known regression and complexity growth",
+    "requirements": ["The service should be fast and robust."],
+    "changed_modules": ["engine.py", "routing.py"],
+    "tests_changed": ["test_engine.py"],
+    "known_failures": ["regression test fails for invalid route"],
+    "complexity_delta": 12.0,
+    "coverage_delta": -8.0,
+    "expected_recommendation": "block"
+  }
+]
