@@ -1,0 +1,53 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Agentic SQA Architecture</title>
+  <desc id="desc">Architecture showing software change evidence, specialized QA agents, evidence aggregation, human approval, and assurance reporting.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1280" y2="720"><stop stop-color="#F8FBFF"/><stop offset="1" stop-color="#F5F3FF"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0F172A" flood-opacity="0.10"/></filter></defs>
+  <rect width="1280" height="720" rx="28" fill="url(#bg)"/>
+  <text x="60" y="68" font-family="Arial" font-size="30" font-weight="800" fill="#0F172A">Trustworthy Agentic SQA Architecture</text>
+  <text x="60" y="98" font-family="Arial" font-size="15" fill="#64748B">Evidence-first specialization with explicit confidence and human oversight</text>
+
+  <g filter="url(#s)">
+    <rect x="60" y="150" width="220" height="430" rx="24" fill="white"/>
+    <text x="90" y="190" font-family="Arial" font-size="16" font-weight="700" fill="#0F172A">Software Change</text>
+    <rect x="88" y="220" width="164" height="54" rx="13" fill="#EFF6FF"/><text x="170" y="252" text-anchor="middle" font-family="Arial" font-size="13" fill="#1D4ED8">Requirements</text>
+    <rect x="88" y="290" width="164" height="54" rx="13" fill="#EFF6FF"/><text x="170" y="322" text-anchor="middle" font-family="Arial" font-size="13" fill="#1D4ED8">Changed Modules</text>
+    <rect x="88" y="360" width="164" height="54" rx="13" fill="#EFF6FF"/><text x="170" y="392" text-anchor="middle" font-family="Arial" font-size="13" fill="#1D4ED8">Tests &amp; Coverage</text>
+    <rect x="88" y="430" width="164" height="54" rx="13" fill="#EFF6FF"/><text x="170" y="462" text-anchor="middle" font-family="Arial" font-size="13" fill="#1D4ED8">Known Failures</text>
+    <rect x="88" y="500" width="164" height="54" rx="13" fill="#EFF6FF"/><text x="170" y="532" text-anchor="middle" font-family="Arial" font-size="13" fill="#1D4ED8">Complexity Signals</text>
+  </g>
+
+  <path d="M280 365H330" stroke="#94A3B8" stroke-width="3" marker-end="url(#a)"/>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#94A3B8"/></marker></defs>
+
+  <g filter="url(#s)">
+    <rect x="330" y="132" width="530" height="466" rx="26" fill="white"/>
+    <text x="360" y="174" font-family="Arial" font-size="17" font-weight="700" fill="#0F172A">Agentic SQA Orchestrator</text>
+    <text x="360" y="198" font-family="Arial" font-size="12" fill="#64748B">Specialized agents analyze different quality dimensions</text>
+    <g>
+      <rect x="360" y="230" width="208" height="62" rx="14" fill="#EFF6FF" stroke="#93C5FD"/><text x="464" y="257" text-anchor="middle" font-family="Arial" font-size="13" font-weight="700" fill="#1D4ED8">Requirements QA</text><text x="464" y="276" text-anchor="middle" font-family="Arial" font-size="11" fill="#64748B">ambiguity • traceability</text>
+      <rect x="592" y="230" width="238" height="62" rx="14" fill="#F5F3FF" stroke="#C4B5FD"/><text x="711" y="257" text-anchor="middle" font-family="Arial" font-size="13" font-weight="700" fill="#6D28D9">Code Quality</text><text x="711" y="276" text-anchor="middle" font-family="Arial" font-size="11" fill="#64748B">complexity • maintainability</text>
+      <rect x="360" y="312" width="208" height="62" rx="14" fill="#ECFDF5" stroke="#6EE7B7"/><text x="464" y="339" text-anchor="middle" font-family="Arial" font-size="13" font-weight="700" fill="#047857">Test Strategy</text><text x="464" y="358" text-anchor="middle" font-family="Arial" font-size="11" fill="#64748B">coverage • test adequacy</text>
+      <rect x="592" y="312" width="238" height="62" rx="14" fill="#FFF7ED" stroke="#FDBA74"/><text x="711" y="339" text-anchor="middle" font-family="Arial" font-size="13" font-weight="700" fill="#C2410C">Defect Analysis</text><text x="711" y="358" text-anchor="middle" font-family="Arial" font-size="11" fill="#64748B">failures • regression risk</text>
+      <rect x="476" y="394" width="238" height="62" rx="14" fill="#F0FDFA" stroke="#5EEAD4"/><text x="595" y="421" text-anchor="middle" font-family="Arial" font-size="13" font-weight="700" fill="#0F766E">Release Assurance</text><text x="595" y="440" text-anchor="middle" font-family="Arial" font-size="11" fill="#64748B">evidence synthesis</text>
+    </g>
+    <rect x="390" y="490" width="410" height="74" rx="18" fill="#F8FAFC" stroke="#CBD5E1"/>
+    <text x="595" y="519" text-anchor="middle" font-family="Arial" font-size="14" font-weight="700" fill="#0F172A">Evidence + Confidence + Risk Engine</text>
+    <text x="595" y="542" text-anchor="middle" font-family="Arial" font-size="11" fill="#64748B">separates observations from agent judgement</text>
+  </g>
+
+  <path d="M860 365H906" stroke="#94A3B8" stroke-width="3" marker-end="url(#a)"/>
+  <g filter="url(#s)">
+    <rect x="906" y="180" width="314" height="350" rx="26" fill="white"/>
+    <text x="936" y="220" font-family="Arial" font-size="16" font-weight="700" fill="#0F172A">Assurance Control</text>
+    <rect x="936" y="252" width="254" height="70" rx="16" fill="#FFF7ED" stroke="#FDBA74"/>
+    <text x="1063" y="280" text-anchor="middle" font-family="Arial" font-size="14" font-weight="700" fill="#C2410C">Human Approval Gate</text>
+    <text x="1063" y="301" text-anchor="middle" font-family="Arial" font-size="11" fill="#64748B">high risk • low confidence</text>
+    <rect x="936" y="344" width="254" height="70" rx="16" fill="#ECFDF5" stroke="#6EE7B7"/>
+    <text x="1063" y="372" text-anchor="middle" font-family="Arial" font-size="14" font-weight="700" fill="#047857">Assurance Decision</text>
+    <text x="1063" y="393" text-anchor="middle" font-family="Arial" font-size="11" fill="#64748B">approve • review • block</text>
+    <rect x="936" y="436" width="254" height="62" rx="16" fill="#EFF6FF" stroke="#93C5FD"/>
+    <text x="1063" y="462" text-anchor="middle" font-family="Arial" font-size="14" font-weight="700" fill="#1D4ED8">Audit Report</text>
+    <text x="1063" y="483" text-anchor="middle" font-family="Arial" font-size="11" fill="#64748B">evidence • confidence • trace</text>
+  </g>
+  <text x="60" y="662" font-family="Arial" font-size="13" fill="#64748B">Research prototype: analysis authority and release authority remain deliberately separated.</text>
+</svg>
