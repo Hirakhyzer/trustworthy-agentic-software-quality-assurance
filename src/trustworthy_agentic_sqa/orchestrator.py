@@ -7,7 +7,8 @@ from .quality_agents import (
     RequirementsQAAgent,
     TestStrategyAgent,
 )
-from .risk_engine import aggregate_risk, recommend, requires_human_approval
+from .risk_engine import aggregate_risk as calculate_aggregate_risk
+from .risk_engine import recommend, requires_human_approval
 from .schema import AssuranceDecision, SoftwareChange
 
 
@@ -25,7 +26,7 @@ class AgenticSQAOrchestrator:
 
     def assess(self, change: SoftwareChange) -> AssuranceDecision:
         findings = [agent.analyze(change) for agent in self.agents]
-        aggregate_risk, risk_score = aggregate_risk(findings)
+        aggregate_risk, risk_score = calculate_aggregate_risk(findings)
         confidence = sum(f.confidence for f in findings) / len(findings)
         decision = recommend(aggregate_risk, confidence)
         human_gate = requires_human_approval(aggregate_risk, confidence)
