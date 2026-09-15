@@ -57,7 +57,8 @@ This project studies how agentic AI can improve quality assurance **without turn
 | Human approval gates | Escalate high-risk or low-confidence release decisions for human review. |
 | QA reliability metrics | Measure consistency, calibration, false positives, unsupported findings, and decision stability. |
 | Benchmark scenarios | Provide controlled synthetic software-quality cases for reproducible experiments. |
-| Evaluation protocol | Compare agentic QA against rule-based and single-agent baselines. |
+| Baseline comparison | Compare agentic SQA with a deterministic rule-based quality baseline. |
+| Evaluation protocol | Support single-agent, multi-agent, and human-oversight experimental conditions. |
 
 ---
 
@@ -142,6 +143,19 @@ The framework deliberately separates **observed evidence** from **agent judgemen
 
 ---
 
+## Experimental Conditions
+
+The repository is structured to support comparison of:
+
+| Condition | Purpose |
+|---|---|
+| Rule-based SQA | Deterministic baseline using explicit thresholds. |
+| Single-agent SQA | Future general-purpose AI baseline. |
+| Multi-agent SQA | Specialized quality agents with evidence aggregation. |
+| Multi-agent + human oversight | Agentic QA with explicit approval and override points. |
+
+---
+
 ## Evaluation Metrics
 
 The research prototype supports experiments with:
@@ -167,9 +181,10 @@ cd trustworthy-agentic-software-quality-assurance
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\\Scripts\\activate
 python -m pip install --upgrade pip
-python -m pip install -e .
+python -m pip install -e ".[dev]"
 python examples/run_demo.py
 pytest
+python benchmarks/run_benchmark.py
 ```
 
 ---
@@ -185,7 +200,8 @@ trustworthy-agentic-software-quality-assurance/
 │   ├── continuous-quality-workflow.svg
 │   └── quality-assurance-dashboard.svg
 ├── benchmarks/
-│   └── README.md
+│   ├── README.md
+│   └── run_benchmark.py
 ├── data/
 │   └── scenarios.json
 ├── docs/
@@ -203,6 +219,7 @@ trustworthy-agentic-software-quality-assurance/
 │   ├── quality_agents.py
 │   ├── evidence.py
 │   ├── risk_engine.py
+│   ├── baselines.py
 │   ├── orchestrator.py
 │   └── evaluation.py
 └── tests/
@@ -229,6 +246,8 @@ Experiments should record:
 - baseline result;
 - evaluation metrics;
 - random seed or deterministic configuration where relevant.
+
+See [`docs/experimental-protocol.md`](docs/experimental-protocol.md) and [`docs/threats-to-validity.md`](docs/threats-to-validity.md) for the research protocol.
 
 ---
 
