@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trustworthy-agentic-sqa"
+version = "0.1.0"
+description = "Research framework for trustworthy agentic AI in continuous software quality assurance"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{name = "Hira Khyzer"}]
+license = {text = "MIT"}
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
