@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+title: Trustworthy Agentic Software Quality Assurance
+message: If you use this research prototype, please cite this repository.
+type: software
+authors:
+  - family-names: Khyzer
+    given-names: Hira
+repository-code: https://github.com/Hirakhyzer/trustworthy-agentic-software-quality-assurance
+license: MIT
+version: 0.1.0
+date-released: 2026-09-15
+keywords:
+  - software quality assurance
+  - agentic AI
+  - trustworthy AI
+  - software engineering
+  - human oversight
+  - continuous assurance
