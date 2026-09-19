@@ -36,15 +36,9 @@ This project studies how agentic AI can improve quality assurance **without turn
 
 ## Core Research Question
 
-> **Can agentic AI improve continuous software quality assurance while preserving reliability, transparency, traceability, and effective human oversight?**
+> **How can agentic AI be designed and empirically evaluated to improve continuous software quality assurance while preserving evidence traceability, calibrated uncertainty, decision reliability, and meaningful human control?**
 
-### Supporting Questions
-
-1. How accurately can specialized QA agents identify quality risks across requirements, code, tests, and release evidence?
-2. When should an agent act autonomously, recommend an action, or escalate to a human reviewer?
-3. Which evidence structures make agentic QA decisions auditable and reproducible?
-4. How stable are agent recommendations across repeated runs and changing software contexts?
-5. Does multi-agent QA outperform static rules, conventional automation, or single-model baselines?
+The detailed PhD positioning, research gaps, refined research questions, falsifiable hypotheses, and expected contributions are documented in [`docs/research-gap.md`](docs/research-gap.md).
 
 ---
 
@@ -53,12 +47,13 @@ This project studies how agentic AI can improve quality assurance **without turn
 | Contribution | Goal |
 |---|---|
 | Agentic SQA architecture | Coordinate specialized software quality agents through a transparent orchestrator. |
-| Evidence-first decision model | Require every recommendation to reference observable quality evidence. |
+| Evidence-first decision model | Require recommendations to reference observable quality evidence. |
 | Human approval gates | Escalate high-risk or low-confidence release decisions for human review. |
-| QA reliability metrics | Measure consistency, calibration, false positives, unsupported findings, and decision stability. |
+| QA reliability metrics | Measure consistency, calibration, under-calls, evidence support, and decision stability. |
 | Benchmark scenarios | Provide controlled synthetic software-quality cases for reproducible experiments. |
 | Baseline comparison | Compare agentic SQA with a deterministic rule-based quality baseline. |
 | Evaluation protocol | Support single-agent, multi-agent, and human-oversight experimental conditions. |
+| Assurance-drift analysis | Study whether model, prompt, policy, or orchestration changes alter QA behavior over time. |
 
 ---
 
@@ -139,7 +134,7 @@ Finding
   + Oversight requirement
 ```
 
-The framework deliberately separates **observed evidence** from **agent judgement**. High-impact recommendations can be configured to require explicit human approval.
+The framework deliberately separates **observed evidence** from **agent judgement** and **analysis** from **decision authority**. High-impact recommendations can be configured to require explicit human approval.
 
 ---
 
@@ -150,26 +145,44 @@ The repository is structured to support comparison of:
 | Condition | Purpose |
 |---|---|
 | Rule-based SQA | Deterministic baseline using explicit thresholds. |
-| Single-agent SQA | Future general-purpose AI baseline. |
+| Single-agent SQA | General-purpose AI baseline. |
 | Multi-agent SQA | Specialized quality agents with evidence aggregation. |
 | Multi-agent + human oversight | Agentic QA with explicit approval and override points. |
 
 ---
 
-## Evaluation Metrics
+## Implemented Evaluation Metrics
 
-The research prototype supports experiments with:
+The evaluation module now provides research-oriented metrics that distinguish ordinary prediction error from potentially unsafe assurance error:
 
-- defect-detection precision and recall;
-- false-positive and false-negative rates;
-- test recommendation usefulness;
-- quality-risk ranking agreement;
-- agent decision consistency across repeated runs;
-- evidence completeness;
-- confidence calibration;
-- human-agent agreement and override rate;
-- release recommendation accuracy;
-- analyst effort and review time.
+- exact release-recommendation accuracy;
+- **mean ordinal recommendation error** across `approve < review < block`;
+- **undercall rate** for predictions that are less conservative than ground truth;
+- human-approval-gate precision, recall, and F1;
+- mean decision confidence;
+- structured evidence coverage across agent findings;
+- repeated-run recommendation consistency.
+
+The metric definitions, interpretation guidance, and reporting requirements are documented in [`docs/metrics-specification.md`](docs/metrics-specification.md).
+
+---
+
+## Benchmark Dataset
+
+The controlled benchmark contains multiple software-quality families, including safe changes, requirements ambiguity, test adequacy, test traceability, maintainability, known defects, conflicting evidence, compound risk, and threshold boundary cases.
+
+Each scenario records:
+
+```text
+scenario ID
+quality family
+observable inputs
+expected recommendation
+expected human-approval gate
+ground-truth rationale
+```
+
+Dataset-integrity tests verify scenario uniqueness, coverage of multiple quality families, required ground-truth fields, and the presence of approve/review/block cases.
 
 ---
 
@@ -206,8 +219,10 @@ trustworthy-agentic-software-quality-assurance/
 │   └── scenarios.json
 ├── docs/
 │   ├── research-background.md
+│   ├── research-gap.md
 │   ├── research-framework.md
 │   ├── evaluation-methodology.md
+│   ├── metrics-specification.md
 │   ├── experimental-protocol.md
 │   ├── threats-to-validity.md
 │   └── ethical-boundary.md
@@ -223,7 +238,9 @@ trustworthy-agentic-software-quality-assurance/
 │   ├── orchestrator.py
 │   └── evaluation.py
 └── tests/
-    └── test_orchestrator.py
+    ├── test_orchestrator.py
+    ├── test_benchmark_dataset.py
+    └── test_evaluation_metrics.py
 ```
 
 ---
@@ -247,7 +264,7 @@ Experiments should record:
 - evaluation metrics;
 - random seed or deterministic configuration where relevant.
 
-See [`docs/experimental-protocol.md`](docs/experimental-protocol.md) and [`docs/threats-to-validity.md`](docs/threats-to-validity.md) for the research protocol.
+See [`docs/experimental-protocol.md`](docs/experimental-protocol.md), [`docs/metrics-specification.md`](docs/metrics-specification.md), and [`docs/threats-to-validity.md`](docs/threats-to-validity.md) for the research protocol.
 
 ---
 
