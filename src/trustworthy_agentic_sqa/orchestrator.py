@@ -3,6 +3,7 @@ from __future__ import annotations
 from .quality_agents import (
     CodeQualityAgent,
     DefectAnalysisAgent,
+    QualityAgent,
     ReleaseAssuranceAgent,
     RequirementsQAAgent,
     TestStrategyAgent,
@@ -13,16 +14,22 @@ from .schema import AssuranceDecision, SoftwareChange
 
 
 class AgenticSQAOrchestrator:
-    """Coordinates specialized quality agents and preserves human oversight."""
+    """Coordinates specialized quality agents and preserves human oversight.
 
-    def __init__(self) -> None:
-        self.agents = [
+    A custom agent list can be supplied for controlled ablation studies. The
+    default configuration preserves the full five-agent research architecture.
+    """
+
+    def __init__(self, agents: list[QualityAgent] | None = None) -> None:
+        self.agents = agents if agents is not None else [
             RequirementsQAAgent(),
             CodeQualityAgent(),
             TestStrategyAgent(),
             DefectAnalysisAgent(),
             ReleaseAssuranceAgent(),
         ]
+        if not self.agents:
+            raise ValueError("AgenticSQAOrchestrator requires at least one quality agent")
 
     def assess(self, change: SoftwareChange) -> AssuranceDecision:
         findings = [agent.analyze(change) for agent in self.agents]
