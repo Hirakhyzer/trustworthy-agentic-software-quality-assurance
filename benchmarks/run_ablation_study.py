@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 
 from trustworthy_agentic_sqa import AgenticSQAOrchestrator, Recommendation, SoftwareChange
-from trustworthy_agentic_sqa.evaluation import agent_risk_disagreement
+from trustworthy_agentic_sqa.evaluation import agent_risk_disagreement, is_undercall
 from trustworthy_agentic_sqa.quality_agents import (
     CodeQualityAgent,
     DefectAnalysisAgent,
@@ -52,7 +52,7 @@ def main() -> None:
             agent for index, agent in enumerate(full_agent_set()) if index != removed_index
         ]
 
-    print("configuration\taccuracy\tundercalls\tmean_disagreement")
+    print("configuration\taccuracy\tundercall_rate\tmean_disagreement")
 
     for name, agents in configurations.items():
         orchestrator = AgenticSQAOrchestrator(agents=agents)
@@ -64,12 +64,7 @@ def main() -> None:
             decision = orchestrator.assess(to_change(raw))
             expected = Recommendation(raw["expected_recommendation"])
             correct += int(decision.recommendation == expected)
-            undercalls += int(
-                decision.recommendation.value == "approve"
-                and expected.value in {"review", "block"}
-                or decision.recommendation.value == "review"
-                and expected.value == "block"
-            )
+            undercalls += int(is_undercall(decision.recommendation, expected))
             disagreements.append(agent_risk_disagreement(decision))
 
         total = len(scenarios)
