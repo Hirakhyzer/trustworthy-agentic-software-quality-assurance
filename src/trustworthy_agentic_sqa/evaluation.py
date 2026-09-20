@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from itertools import combinations
 from statistics import mean
 
 from .schema import AssuranceDecision, Recommendation
@@ -33,6 +34,7 @@ class BenchmarkMetrics:
     gate_f1: float
     mean_confidence: float
     evidence_coverage: float
+    mean_agent_risk_disagreement: float
 
 
 def evaluate_decision(decision: AssuranceDecision, expected: Recommendation) -> EvaluationResult:
@@ -51,6 +53,21 @@ def decision_consistency(decisions: list[AssuranceDecision]) -> float:
     first = decisions[0].recommendation
     matches = sum(d.recommendation == first for d in decisions)
     return matches / len(decisions)
+
+
+def agent_risk_disagreement(decision: AssuranceDecision) -> float:
+    """Return pairwise disagreement among agent risk labels.
+
+    A score of 0 means every finding uses the same risk label. A larger value
+    means a greater share of agent pairs disagree. This treats disagreement as
+    an observable uncertainty signal rather than silently averaging it away.
+    """
+    if len(decision.findings) < 2:
+        return 0.0
+
+    pairs = list(combinations(decision.findings, 2))
+    disagreements = sum(left.risk != right.risk for left, right in pairs)
+    return disagreements / len(pairs)
 
 
 def ordinal_recommendation_error(
@@ -101,7 +118,7 @@ def summarize_benchmark(
     expected_recommendations: list[Recommendation],
     expected_human_gates: list[bool],
 ) -> BenchmarkMetrics:
-    """Summarize effectiveness, safety, oversight, and evidence metrics.
+    """Summarize effectiveness, safety, oversight, evidence, and disagreement metrics.
 
     The three lists must be aligned by scenario. This function deliberately
     reports ordinal error and under-calls separately from raw accuracy because
@@ -146,4 +163,5 @@ def summarize_benchmark(
         gate_f1=gate_f1,
         mean_confidence=mean(decision.confidence for decision in decisions),
         evidence_coverage=mean(finding_evidence_coverage(decision) for decision in decisions),
+        mean_agent_risk_disagreement=mean(agent_risk_disagreement(decision) for decision in decisions),
     )
