@@ -144,7 +144,8 @@ def test_summary_reports_accuracy_safety_gate_and_disagreement_metrics() -> None
     assert metrics.gate_recall == 2 / 3
     assert metrics.gate_f1 == 0.8
     assert metrics.mean_confidence == 0.75
-    assert metrics.evidence_coverage == 1.0
+    # Each of the four decisions has one evidenced finding out of two.
+    assert metrics.evidence_coverage == 0.5
     assert metrics.mean_agent_risk_disagreement == 0.5
 
 
